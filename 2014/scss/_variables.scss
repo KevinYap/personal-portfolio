@@ -1,0 +1,33 @@
+// Global Variables
+
+// Important Note:
+// All basic typography styles are controlled in the _settings.scss file.
+
+// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+
+
+@include font-face('Marydale-Black', '../fonts/marydblk-webfont', normal, normal);
+$marydale-black: "Marydale-Black", sans-serif;
+
+@include font-face('FS-Albert-Pro', '../fonts/fs_albert_pro-webfont', normal, normal);
+$fs-albert-pro: "FS-Albert-Pro", sans-serif;
+
+@include font-face('FS-Albert-Pro-EB', '../fonts/fs_albert_pro-extrabold-webfont', normal, normal);
+$fs-albert-pro-eb: "FS-Albert-Pro-EB", sans-serif;
+
+@include font-face('FS-Albert-Pro-Bold', '../fonts/fs_albert-bold-webfont', normal, normal);
+$fs-albert-pro-bold: "FS-Albert-Pro-Bold", sans-serif;
+
+@include font-face('FS-Albert', '../fonts/fs_albert-webfont', normal, normal);
+$fs-albert: "FS-Albert", sans-serif;
+
+
+
+
+
+// Arial
+$arial: $body-font-family;
+// $arial: Arial, Helvetica, sans-serif;
+
+// Global Red 
+$red-color: #cc0000;
