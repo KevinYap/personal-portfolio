@@ -1,5 +1,6 @@
 var gulp = require('gulp'); // tells Node to look into the node_modules folder for a package named gulp
 var stylus = require('gulp-stylus');
+var sourcemaps = require('gulp-sourcemaps');
 var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
@@ -8,15 +9,24 @@ var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
+var nib = require('nib');
 var browserSync = require('browser-sync').create();
 
 gulp.task('hello', function(){
 	console.log('Hello K!');
 });
 
+// Compile stylus to css
 gulp.task('stylus', function(){
 	return gulp.src('app/styl/app.styl')
-		.pipe(stylus()) // Using gulp-stylus
+		.pipe(sourcemaps.init()) // Using gulp-sourcemaps
+		.pipe(stylus({ // Using gulp-stylus
+			paths:  ['node_modules'],
+			import: ['jeet/stylus/jeet', 'nib', 'rupture/rupture'], // import jeet,nib,rupture
+          	use: [nib()],
+          	'include css': true
+		}))
+		.pipe(sourcemaps.write('./maps')) // start write sourcemaps
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({ // browser sync
 	     	stream: true

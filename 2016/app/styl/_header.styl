@@ -1,0 +1,149 @@
+header
+	width 100%
+	position fixed
+	top 0
+	padding 20px 0
+	z-index 999
+	+from-width(1024px)
+		position absolute
+	
+	.header-i
+		center(62.5em)
+		.logo
+			z-index 98
+			position relative
+			+from-width(1024px)
+				col(7.5/12)
+				width 30px
+			
+			img
+				width 20px
+			
+			#logo-i
+				width 20px
+				height 25px
+		
+		.menu-mbl-wrapper
+			position absolute
+			top 20px
+			right 20px
+			z-index 99
+			+from-width(1024px)
+				display none
+			
+			.menu-mbl
+				position relative
+				width 25px
+				height 17px
+				cursor pointer
+				transition 0.3s ease-in-out
+				span
+					width 25px
+					height 3px
+					background-color #fff
+					position absolute
+					left 0
+					border-radius 50px
+					transition 0.3s ease-in-out
+				
+				span:nth-child(1)
+					top 0
+					transform-origin 0 0
+				
+				span:nth-child(2)
+					top 7px
+				
+				span:nth-child(3)
+					top 14px
+					transform-origin 3px 5px
+					
+			.menu-close
+				span:nth-child(1)
+					transform rotate(45deg)
+				
+				span:nth-child(2)
+					opacity 0
+					left 5px
+
+				span:nth-child(3)
+					transform rotate(-45deg)
+
+		nav
+			display none
+			width 100%
+			height 100vh
+			background-color rgba(0, 0, 0, 0.9)
+			position absolute
+			top 0
+			left 0
+			+from-width(1024px)
+				col(4.5/12)
+				height auto
+				padding-right 0
+				display block
+				background none
+				position initial
+				float right
+				min-width 355px
+			
+			ul
+				margin 0
+				padding 0
+				list-style-type none
+				vertical-align()
+				+from-width(1024px)
+					position initial
+					top 0
+					transform translateY(0)
+				
+				li
+					display block
+					position relative
+					text-align center
+					margin-bottom 20px
+					transition 0.3s ease-in-out
+					+from-width(1024px)
+						display inline-block
+						margin-bottom 0
+					
+					a
+						display block
+						set-font-size(16px)
+						font-family Raleway
+						font-weight 600
+						text-transform uppercase
+						letter-spacing 3px
+						padding 0 16px
+						margin-top 5px
+						color #fff
+						transition 0.3s ease-in-out
+						+from-width(1024px)
+							set-font-size(12px)
+					
+					a:after
+						content ''
+						width 90%
+						height 2px
+						background-color lightBlue
+						position absolute
+						bottom 9px
+						left 5px
+						transform-origin center center
+						transform scaleX(0)
+						transition 0.3s ease-in-out
+			
+			ul:hover > li a
+				+from-width(1024px)
+					opacity 0.5
+			
+			ul:hover > li a:hover
+				+from-width(1024px)
+					opacity 1
+			
+			ul:hover > li a:after
+				+from-width(1024px)
+					transform scaleX(1)
+			
+			ul:hover > li a:hover:after
+				+from-width(1024px)
+					transform scaleX(0)

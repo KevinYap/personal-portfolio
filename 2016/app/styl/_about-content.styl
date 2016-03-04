@@ -1,0 +1,68 @@
+.about-content
+	width 100%
+	margin 0 auto
+	padding 10px 20px
+	+from-width(1024px)
+		center(730px)
+	
+	.me
+		margin 40px auto
+		text-align center
+		width 100%
+		img
+			border-radius 1000px
+			border 10px solid #ededed
+	
+	.description
+		max-width 100%
+		padding 0
+		span
+			display inline
+			+from-width(640px)
+				display none
+	
+	.my-equipment
+		margin 40px auto 20px auto
+		width 100%
+		+from-width(640px)
+			margin 40px auto
+		
+		hr
+			opacity 0.3
+		
+		.equipment
+			text-align center
+			margin 20px auto
+			+from-width(640px)
+				text-align left
+			
+			.left-content, .right-content
+				stack()
+				center(100%)
+				+from-width(640px)
+					cf()
+					col(1/2)
+					padding-left 0
+				
+				.category, .list
+					display block
+					font-size rem-calc(16)
+					font-family open-sans
+					line-height 1.5
+					+from-width(640px)
+						font-size rem-calc(14)
+						line-height 1.7
+				
+				.category
+					font-weight 300
+				
+				.list
+					font-weight 600
+					padding-bottom 20px
+					+from-width(640px)
+						padding-bottom 0
+					
+	a.primary
+		width 280px
+		+from-width(640px)
+			width 300px

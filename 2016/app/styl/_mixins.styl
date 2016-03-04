@@ -1,0 +1,53 @@
+//Useful Mixins
+
+//@font-face (from Bourbon: http://bourbon.io/)
+// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+
+// @mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+//   @font-face {
+//     font-family: $font-family;
+//     font-weight: $weight;
+//     font-style: $style;
+
+// 	src: url('#{$file-path}.eot');
+// 	src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
+// 	   url('#{$file-path}.woff')                     format('woff'),
+// 	   url('#{$file-path}.ttf')                      format('truetype'),
+// 	   url('#{$file-path}.svg##{$font-family}')      format('svg');
+//   }
+// }
+
+// Vertical align mixin - this vertically aligns anything
+// Reference here: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+
+vertical-align() {
+  position relative
+  top 50%
+  transform translateY(-50%)
+}
+
+set-font-size(value) {
+    font-size: value; // add PX (or original value) as backup
+
+    if (value is inherit) {
+        /* do nothing, "inherit" has no unit */
+    } else {
+        font-size: remify(value);
+    }
+}
+
+remify(value) { /* separate mixin, so it can be used elsewhere */
+    u = unit(value);
+
+    if (u is 'px') {
+        return unit(value/16, 'rem');
+    } else {
+        return unit(value, u);
+    }
+}
+
+@mixin box-shadow-small {
+  -webkit-box-shadow: 2px 2px #666;
+  -moz-box-shadow: 2px 2px #666;
+  box-shadow: 2px 2px #666;
+}
