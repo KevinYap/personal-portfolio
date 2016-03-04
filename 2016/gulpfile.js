@@ -7,6 +7,7 @@ var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
+var autoprefixer = require('gulp-autoprefixer');
 var del = require('del');
 var runSequence = require('run-sequence');
 var nib = require('nib');
@@ -25,6 +26,10 @@ gulp.task('stylus', function(){
 			import: ['jeet/stylus/jeet', 'nib', 'rupture/rupture'], // import jeet,nib,rupture
           	use: [nib()],
           	'include css': true
+		}))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
 		}))
 		.pipe(sourcemaps.write('./maps')) // start write sourcemaps
 		.pipe(gulp.dest('app/css'))

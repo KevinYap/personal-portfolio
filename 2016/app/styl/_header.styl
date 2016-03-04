@@ -6,7 +6,6 @@ header
 	z-index 999
 	+from-width(1024px)
 		position absolute
-	
 	.header-i
 		center(62.5em)
 		.logo
@@ -15,14 +14,11 @@ header
 			+from-width(1024px)
 				col(7.5/12)
 				width 30px
-			
 			img
 				width 20px
-			
 			#logo-i
 				width 20px
 				height 25px
-		
 		.menu-mbl-wrapper
 			position absolute
 			top 20px
@@ -30,7 +26,6 @@ header
 			z-index 99
 			+from-width(1024px)
 				display none
-			
 			.menu-mbl
 				position relative
 				width 25px
@@ -45,29 +40,22 @@ header
 					left 0
 					border-radius 50px
 					transition 0.3s ease-in-out
-				
 				span:nth-child(1)
 					top 0
 					transform-origin 0 0
-				
 				span:nth-child(2)
 					top 7px
-				
 				span:nth-child(3)
 					top 14px
 					transform-origin 3px 5px
-					
 			.menu-close
 				span:nth-child(1)
 					transform rotate(45deg)
-				
 				span:nth-child(2)
 					opacity 0
 					left 5px
-
 				span:nth-child(3)
 					transform rotate(-45deg)
-
 		nav
 			display none
 			width 100%
@@ -85,7 +73,6 @@ header
 				position initial
 				float right
 				min-width 355px
-			
 			ul
 				margin 0
 				padding 0
@@ -95,7 +82,6 @@ header
 					position initial
 					top 0
 					transform translateY(0)
-				
 				li
 					display block
 					position relative
@@ -105,7 +91,6 @@ header
 					+from-width(1024px)
 						display inline-block
 						margin-bottom 0
-					
 					a
 						display block
 						set-font-size(16px)
@@ -119,31 +104,29 @@ header
 						transition 0.3s ease-in-out
 						+from-width(1024px)
 							set-font-size(12px)
-					
-					a:after
-						content ''
-						width 90%
-						height 2px
-						background-color lightBlue
-						position absolute
-						bottom 9px
-						left 5px
-						transform-origin center center
-						transform scaleX(0)
-						transition 0.3s ease-in-out
+						&:after
+							content ''
+							width 90%
+							height 2px
+							background-color lightBlue
+							position absolute
+							bottom 9px
+							left 5px
+							transform-origin center center
+							transform scaleX(0)
+							transition 0.3s ease-in-out
 			
-			ul:hover > li a
-				+from-width(1024px)
-					opacity 0.5
-			
-			ul:hover > li a:hover
-				+from-width(1024px)
-					opacity 1
-			
-			ul:hover > li a:after
-				+from-width(1024px)
-					transform scaleX(1)
-			
-			ul:hover > li a:hover:after
-				+from-width(1024px)
-					transform scaleX(0)
+				&:hover
+					> li
+						a
+							+from-width(1024px)
+								opacity 0.5
+						&:hover
+							+from-width(1024px)
+								opacity 1
+								:after
+									+from-width(1024px)
+										transform scaleX(0)
+						a:after
+							+from-width(1024px)
+								transform scaleX(1)
