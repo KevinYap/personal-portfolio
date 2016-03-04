@@ -1,0 +1,195 @@
+header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	// background-color: #101010;
+	padding: 20px 0;
+	z-index: 999;
+	@media #{$large-up} {
+		position: absolute;
+	}
+	.header-i {
+		@include grid-row();
+		.logo {
+			@include grid-column(12);
+			z-index: 98;
+			position: relative;
+			@media #{$large-up} {
+				@include grid-column(7.5);
+				width: 30px;
+				// padding-left: 0;
+			}
+			img {
+				width: 20px;
+			}
+			#logo-i {
+				width: 20px;
+				height: 25px;
+			}
+		}
+		.menu-mbl-wrapper {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			z-index: 99;
+			@media #{$large-up} {
+				display: none;
+			}
+			.menu-mbl {
+				position: relative;
+				width: 25px;
+				height: 17px;
+				cursor: pointer;
+				@include web-transition;
+				span {
+					width: 25px;
+					height: 3px;
+					background-color: #fff;
+					position: absolute;
+					left: 0;
+					border-radius: 50px;
+					@include web-transition;
+				}
+				span:nth-child(1) {
+					top: 0;
+					-webkit-transform-origin: 0 0;
+					-moz-transform-origin: 0 0;
+					-o-transform-origin: 0 0;
+					transform-origin: 0 0;
+				}
+				span:nth-child(2) {
+					top: 7px;
+				}
+				span:nth-child(3) {
+					top: 14px;
+					-webkit-transform-origin: 3px 5px;
+					-moz-transform-origin: 3px 5px;
+					-o-transform-origin: 3px 5px;
+					transform-origin: 3px 5px;
+				}
+			}
+			.menu-close {
+				span:nth-child(1) {
+					-webkit-transform: rotate(45deg);
+					-moz-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+				span:nth-child(2) {
+					opacity: 0;
+					left: 5px;
+				}
+				span:nth-child(3) {
+					-webkit-transform: rotate(-45deg);
+					-moz-transform: rotate(-45deg);
+					-o-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+				}
+			}
+		}
+		nav {
+			display: none;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, 0.9);
+			position: absolute;
+			top: 0;
+			left: 0;
+			@media #{$large-up} {
+				@include grid-column(4.5);
+				height: auto;
+				padding-right: 0;
+				display: block;
+				background: none;
+				position: initial;
+				float: right;
+				min-width: 355px;
+			}
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				@include vertical-align;
+				@media #{$large-up} {
+					position: initial;
+					top: 0;
+					-webkit-transform: translateY(0);
+					-moz-transform: translateY(0);
+					-o-transform: translateY(0);
+					transform: translateY(0);
+				}
+				li {
+					display: block;
+					position: relative;
+					text-align: center;
+					margin-bottom: 20px;
+					@include web-transition;
+					@media #{$large-up} {
+						display: inline-block;
+						margin-bottom: 0;
+					}
+					a {
+						display: block;
+						font-size: rem-calc(16);
+						font-family: 'Raleway', sans-serif;
+						font-weight: 600;
+						text-transform: uppercase;
+						letter-spacing: 3px;
+						padding: 0 16px;
+						margin-top: 5px;
+						color: #fff;
+						@include web-transition;
+						@media #{$large-up} {
+							font-size: rem-calc(12);
+						}
+					}
+					a:after {
+						content: '';
+						width: 90%;
+						height: 2px;
+						background-color: $lightBlue;
+						position: absolute;
+						bottom: 9px;
+						left: 5px;
+						-webkit-transform-origin: center center;
+						transform-origin: center center;
+						-webkit-transform: scaleX(0);
+						-moz-transform: scaleX(0);
+						-ms-transform: scaleX(0);
+						-o-transform: scaleX(0);
+						transform: scaleX(0);
+						@include web-transition;
+					}
+				}
+			}
+			ul:hover > li a {
+				@media #{$large-up} {
+					opacity: 0.5;
+				}
+			}
+			ul:hover > li a:hover {
+				@media #{$large-up} {
+					opacity: 1;
+				}
+			}
+			ul:hover > li a:after {
+				@media #{$large-up} {
+					-webkit-transform: scaleX(1);
+					-moz-transform: scaleX(1);
+					-ms-transform: scaleX(1);
+					-o-transform: scaleX(1);
+					transform: scaleX(1);
+				}
+			}
+			ul:hover > li a:hover:after {
+				@media #{$large-up} {
+					-webkit-transform: scaleX(0);
+					-moz-transform: scaleX(0);
+					-ms-transform: scaleX(0);
+					-o-transform: scaleX(0);
+					transform: scaleX(0);
+				}
+			}
+		}
+	}
+}

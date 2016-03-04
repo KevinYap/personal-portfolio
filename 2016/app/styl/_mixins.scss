@@ -1,0 +1,81 @@
+//Useful Mixins
+
+//@font-face (from Bourbon: http://bourbon.io/)
+// Order of the includes matters, and it is: normal, bold, italic, bold+italic.
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+	src: url('#{$file-path}.eot');
+	src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
+	   url('#{$file-path}.woff')                     format('woff'),
+	   url('#{$file-path}.ttf')                      format('truetype'),
+	   url('#{$file-path}.svg##{$font-family}')      format('svg');
+  }
+}
+
+// Vertical align mixin - this vertically aligns anything
+// Reference here: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin web-transition {
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+@mixin box-shadow-small {
+  -webkit-box-shadow: 2px 2px #666;
+  -moz-box-shadow: 2px 2px #666;
+  box-shadow: 2px 2px #666;
+}
+
+@mixin box-shadow-medium {
+  -webkit-box-shadow: 4px 4px #666;
+  -moz-box-shadow: 4px 4px #666;
+  box-shadow: 4px 4px #666;
+}
+
+@mixin rotate180 {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+@mixin rotate0 {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+@mixin preserve3d {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+}
+
+$tablet-width: 641px;
+$desktop-width: 960px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}

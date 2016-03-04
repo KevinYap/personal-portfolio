@@ -1,0 +1,77 @@
+.about-content {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px 20px;
+	@media #{$large-up} {
+		max-width: 730px;
+	}
+	.me {
+		margin: 40px auto;
+		text-align: center;
+		width: 100%;
+		img {
+			border-radius: 1000px;
+			border: 10px solid #ededed;
+		}
+	}
+	.description {
+		max-width: 100%;
+		padding: 0;
+		span {
+			display: inline;
+			@media #{$medium-up} {
+				display: none;
+			}
+		}
+	}
+	.my-equipment {
+		margin: 40px auto 20px auto;
+		width: 100%;
+		@media #{$medium-up} {
+			margin: 40px auto;
+		}
+		hr {
+			opacity: 0.3;
+		}
+		.equipment {
+			text-align: center;
+			margin: 20px auto;
+			@media #{$medium-up} {
+				text-align: left;
+			}
+			.left-content, .right-content {
+				@include grid-column(12);
+				@media #{$medium-up} {
+					@include grid-column(6);
+					padding-left: 0;
+				}
+				.category, .list {
+					display: block;
+					font-size: rem-calc(16);
+					font-family: $open-sans;
+					line-height: 1.5;
+					@media #{$medium-up} {
+						font-size: rem-calc(14);
+						line-height: 1.7;
+					}
+				}
+				.category {
+					font-weight: 300;
+				}
+				.list {
+					font-weight: 600;
+					padding-bottom: 20px;
+					@media #{$medium-up} {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	a.primary {
+		width: 280px;
+		@media #{$medium-up} {
+			width: 300px;
+		}
+	}
+}

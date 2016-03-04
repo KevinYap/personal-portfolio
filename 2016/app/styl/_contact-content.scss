@@ -1,0 +1,21 @@
+.contact-content {
+	width: 100%;
+	margin: 0 auto 200px auto;
+	padding-top: 10px;
+	@media #{$medium-up} {
+		max-width: 960px;
+	}
+	.freelance-status {
+		width: 100%;
+		display: inline-block;
+		font-size: rem-calc(18);
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		text-align: center;
+		margin-bottom: 30px;
+		padding: 0 20px;
+		@media #{$medium-up} {
+			padding: 0;
+		}
+	}
+}

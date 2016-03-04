@@ -1,0 +1,229 @@
+.work-content {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 10px;
+	@media #{$medium-only} {
+		max-width: 640px;
+	}
+	@media #{$large-up} {
+		max-width: 960px;
+	}
+	.work-listing {
+		margin: 30px auto;
+		@media #{$medium-up} {
+			@include grid-row();
+			margin: 60px auto;
+		}
+		.work-block {
+			@include grid-column(12);
+			max-width: 260px;
+			height: 260px;
+			margin: 30px auto;
+			@include preserve3d;
+			@include web-transition;
+			position: relative;
+			float: none;
+			@media #{$medium-only} {
+				@include grid-column(6);
+				margin: 15px 6px;
+				max-width: 300px;
+				height: 300px;
+			}
+			@media #{$large-up} {
+				@include grid-column(4);
+				margin: 15px 9px;
+				max-width: 300px;
+				height: 300px;
+			}
+			.work {
+				width: 100%;
+				height: 260px;
+				text-align: center;
+				padding: 20px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 10;
+				border-radius: 600px;
+				border: 1px solid #ccc;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				@include rotate180;
+				@include web-transition;
+				@media #{$medium-only} {
+					height: 300px;
+					@include rotate180;
+				}
+				@media #{$large-up} {
+					height: 300px;
+					@include rotate0;
+				}
+				img {
+					@include vertical-align;
+				}
+			}
+			.work-description {
+				width: 100%;
+				height: 260px;
+				border-radius: 600px;
+				border: 1px solid #ccc;
+				position: absolute;
+				top: 0;
+				left: 0;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				@include rotate0;
+				@include web-transition;
+				@media #{$medium-only} {
+					height: 300px;
+					@include rotate0;
+				}
+				@media #{$large-up} {
+					height: 300px;
+					@include rotate180;
+				}
+				span {
+					width: 100%;
+					text-align: center;
+				}
+				a {
+					@include web-transition;
+					display: block;
+					margin: 0 auto;
+					padding: 10px;
+					text-align: center;
+					width: 170px;
+					@include vertical-align;
+					font-size: rem-calc(16);
+					letter-spacing: 3px;
+				}
+			}
+		}
+		// Background color for odd number block
+		.work-block:nth-child(odd) {
+			.work {
+				background-color: #202020;
+				color: #fff !important;
+			}
+			.work-description {
+				background-color: #202020;
+				color: #fff !important;
+				a {
+					border: 2px solid #fff;
+					background-color: inherit;
+					@include box-shadow-medium;
+					@media #{$large-up} {
+						-webkit-box-shadow: 0 0;
+						-o-box-shadow: 0 0;
+						-moz-box-shadow: 0 0;
+						box-shadow: 0 0;
+					}
+				}
+				a:hover {
+					@media #{$large-up} {
+						background-color: #fff;
+						color: #202020;
+						@include box-shadow-medium;
+					}
+				}
+			}
+		}
+		// Background color for even number block
+		.work-block:nth-child(even) {
+			.work {
+				background-color: #fff;
+				color: #202020 !important;
+			}
+			.work-description {
+				background-color: #fff;
+				color: #202020 !important;
+				a {
+					border: 2px solid #202020;
+					background-color: inherit;
+					@include box-shadow-medium;
+					@media #{$large-up} {
+						-webkit-box-shadow: 0 0;
+						-o-box-shadow: 0 0;
+						-moz-box-shadow: 0 0;
+						box-shadow: 0 0;
+					}
+				}
+				a:hover {
+					@media #{$large-up} {
+						background-color: #202020;
+						color: #fff;
+						@include box-shadow-medium;
+					}
+				}
+			}
+		}
+		.work-block:hover > .work {
+			@media #{$large-up} {
+				@include rotate180;
+			}
+		}
+		.work-block:hover > .work-description {
+			@media #{$large-up} {
+				@include rotate0;
+			}
+		}
+		.hover_effect {
+			@include rotate180;
+		}
+	}
+	//add class to even block or odd block when hover
+	.work-white {
+		@media #{$large-up} {
+			background-color: #fff !important;
+			-webkit-filter: grayscale(100%) !important;
+			filter: grayscale(100%) !important;
+			@include web-transition;
+		}
+	}
+	.work-black {
+		@media #{$large-up} {
+			background-color: #202020 !important;
+			-webkit-filter: grayscale(100%) !important;
+			filter: grayscale(100%) !important;
+			@include web-transition;
+		}
+	}
+}
+.work-inner-content {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 10px;
+	@media #{$medium-up} {
+		max-width: 960px;
+	}
+	>p {
+		max-width: 100%;
+	}
+	.screenshot-content {
+		margin-bottom: 20px;
+		padding: 0 20px;
+		text-align: center;
+		@media #{$large-up} {
+			padding: 0;
+		}
+		.img-content {
+			@include grid-column($columns:12,$collapse:true);
+			@media #{$large-up} {
+				@include grid-column(6);
+			}
+		}
+		img {
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			// @include box-shadow-medium;
+			@media #{$medium-up} {
+				margin-bottom: 40px;
+			}
+		}
+		img:first-child {
+			@media #{$medium-up} {
+				margin-top: 20px;
+			}
+		}
+	}
+}
