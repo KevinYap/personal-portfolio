@@ -17,9 +17,6 @@
 //   }
 // }
 
-// Vertical align mixin - this vertically aligns anything
-// Reference here: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
-
 vertical-align() {
   position relative
   top 50%
@@ -44,10 +41,4 @@ remify(value) { /* separate mixin, so it can be used elsewhere */
     } else {
         return unit(value, u);
     }
-}
-
-@mixin box-shadow-small {
-  -webkit-box-shadow: 2px 2px #666;
-  -moz-box-shadow: 2px 2px #666;
-  box-shadow: 2px 2px #666;
 }

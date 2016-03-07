@@ -34,22 +34,21 @@
 			margin 20px auto
 			+from-width(640px)
 				text-align left
-			
-			.left-content, .right-content
+
+			.content
 				stack()
 				center(100%)
 				+from-width(640px)
 					cf()
-					col(1/2)
-					padding-left 0
+					col(1/2, cycle:2)
 				
 				.category, .list
 					display block
-					font-size rem-calc(16)
+					set-font-size(16px)
 					font-family open-sans
 					line-height 1.5
 					+from-width(640px)
-						font-size rem-calc(14)
+						set-font-size(14px)
 						line-height 1.7
 				
 				.category
@@ -60,7 +59,7 @@
 					padding-bottom 20px
 					+from-width(640px)
 						padding-bottom 0
-					
+						
 	a.primary
 		width 280px
 		+from-width(640px)

@@ -8,6 +8,9 @@ header-color = #000
 	
 *, *:before, *:after
 	box-sizing border-box
+
+img
+	max-width 100%
   
 body
 	font-family raleway
@@ -34,8 +37,8 @@ body
 .back-to-top
 	display none
 	position fixed
-	bottom rem-calc(40)
-	right rem-calc(40)
+	bottom 40px
+	right 40px
 	width 30px
 	height 30px
 	border-bottom 1px solid #3498db
@@ -72,17 +75,18 @@ a.primary
 	text-align center
 	margin-top 25px
 	transition 0.3s ease-in-out
-	box-shadow 4px 4px #666
-	+from-width(1024px)
+	box-shadow 0 0
+	+from-width(640px)
 		width 315px
-		box-shadow 0 0
+	.touch &
+		box-shadow 4px 4px #666
 	&.project
 		margin 30px auto
 	+from-width(640px)
 			margin 50px auto
 
-a.primary:hover
-	+from-width(1024px)
+.no-touch &
+	a.primary:hover
 		color #fff
 		background-color #212121
 		box-shadow 4px 4px #666
@@ -126,15 +130,15 @@ h2
 		margin-right 2px
 		transition 0.3s ease-in-out
 
-.diagonal-pattern:hover > span
-	+from-width(640px)
+.no-touch &
+	.diagonal-pattern:hover > span
 		transform rotate(-45deg)
 
 p
 	text-align center
 	set-font-size(16px)
-	font-family open-sans
 	font-weight 300
+	font-family open-sans
 	color #000
 	padding 0 20px
 	margin 0 auto

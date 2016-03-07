@@ -22,8 +22,8 @@ footer
 				position absolute
 				bottom 1px
 				transition 0.3s ease-in-out
-			a:hover:after
-				+from-width(640px)
+			.no-touch &
+				a:hover:after	
 					width 100%
 			span
 				color lightBlue
@@ -32,8 +32,8 @@ footer
 				transition 0.3s ease-in-out
 				+from-width(640px)
 					margin 0 20px
-			span:hover
-				+from-width(640px)
+			.no-touch &
+				span:hover
 					transform rotate(180deg)
 	.copyright
 		set-font-size(12px)
