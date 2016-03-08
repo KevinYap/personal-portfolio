@@ -43,6 +43,7 @@ gulp.task('watch', ['browserSync', 'stylus'], function(){
 	// Reloads the browser whenever HTML or JS files change
 	// Other watchers (can be multiple watcher)
 	gulp.watch('app/styl/**/*.styl', ['stylus']);
+	gulp.watch('app/**/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
@@ -89,7 +90,7 @@ gulp.task('fonts', function() {
 gulp.task('clean:dist', function() {
   	return del.sync('dist');
 });
-
+// -----------------------------------------------------------------------------
 // Development
 gulp.task('default', function(callback) {
   	runSequence(['stylus','browserSync', 'watch'], callback)

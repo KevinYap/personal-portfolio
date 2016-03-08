@@ -379,15 +379,12 @@ sup {
   transform: translateY(-50%);
 }
 .preloader-i span {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  position: absolute;
   display: inline-block;
   width: 100%;
   background-color: #3498db;
-  -webkit-animation: loader-inner 2s infinite ease;
-  animation: loader-inner 2s infinite ease;
+  -webkit-animation: loader-inner 2s infinite ease-in;
+  animation: loader-inner 2s infinite ease-in;
 }
 .pageload-overlay {
   position: fixed;
@@ -741,7 +738,7 @@ footer .copyright {
   text-align: center;
   position: relative;
   padding: 35vh 20px 0 20px;
-  background: url("../../img/bg-dark.jpg") center no-repeat #101010;
+  background: url("../img/bg-dark.jpg") center no-repeat #101010;
   background-size: cover;
 }
 .content .intro-content span {
