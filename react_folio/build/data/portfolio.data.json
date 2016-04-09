@@ -1,0 +1,128 @@
+[
+	{
+		"category": "Food and Beverage",
+		"states": "Perak",
+		"title": "M Boutique Ipoh",
+		"contentText":
+		[
+			"Get a Premier Room at RM198 with breakfast (n/p: RM480).",
+			"Download the <a href='http://www.maxis.com.my/en/personal/services/addons/apps/maxis-cs.html' target='_blank'>MyMaxis App</a> now to redeem your rewards."
+		],
+		"contentImage": "./images/m_boutique.jpg",
+		"tncList":
+		[
+			"Valid for bookings from 1 March 2016 - 30 June 2016.",
+			"Valid for stays from 1 March – 30 December 2016.",
+			"Original app voucher must be present at the point of redemption.",
+			"Promotion is not redeemable or exchangeable for cash.",
+			"Not valid with any on-going promotions, offers and /or discounts.",
+			"Prior reservation is required. To make a reservation, call <a href='tel:6052551555'>+605 255 1555</a> and mention your promo code.",
+			"Rooms are subject to availability.",
+			"Strictly no refunds once a payment is made to confirmed your reservation.",
+			"No amendments allowed after your reservation is confirmed. Voucher is subject to forfeiture for cancellation, no-show, or unused voucher.",
+			"Website: <a href='http://ipoh.mboutiquehotels.com/' target='_blank'>http://ipoh.mboutiquehotels.com/</a>"
+		]
+	},
+	{
+		"category": "Shopping",
+		"states": "Selangor",
+		"title": "Blooming",
+		"contentText":
+		[
+			"Non-Valentine's Special 20% discount fresh flowers with a minimum purchase of RM100.",
+			"Valentine's Special 10% discount fresh flowers minimum purchase of RM100."
+		],
+		"contentImage": "./images/blooming.jpg",
+		"tncList":
+		[
+			"Promo valid from 1 January 2016 - 30 April 2016.",
+			"This discount is valid for WALK-IN customers only. Customer to show the proof of promotion redeemed for this offer from Maxis mobile app to enjoy the discount.",
+			"Customers are entitled for 20% discount for all fresh flowers products throughout the whole promotional period EXCEPT during the Valentine's from 10 February - 15 February (both dates are inclusive).",
+			"Minimum purchase amount is RM100 and above."
+		]
+	},
+	{
+		"category": "Entertainment",
+		"states": "Johor",
+		"title": "en - Johor",
+		"contentText":
+		[
+			"Get a Premier Room at RM198 with breakfast (n/p: RM480).",
+			"Download the <a href='http://www.maxis.com.my/en/personal/services/addons/apps/maxis-cs.html' target='_blank'>MyMaxis App</a> now to redeem your rewards."
+		],
+		"contentImage": "./images/m_boutique.jpg",
+		"tncList":
+		[
+			"Valid for bookings from 1 March 2016 - 30 June 2016.",
+			"Valid for stays from 1 March – 30 December 2016.",
+			"Original app voucher must be present at the point of redemption.",
+			"Promotion is not redeemable or exchangeable for cash.",
+			"Not valid with any on-going promotions, offers and /or discounts.",
+			"Prior reservation is required. To make a reservation, call <a href='tel:6052551555'>+605 255 1555</a> and mention your promo code.",
+			"Rooms are subject to availability.",
+			"Strictly no refunds once a payment is made to confirmed your reservation.",
+			"No amendments allowed after your reservation is confirmed. Voucher is subject to forfeiture for cancellation, no-show, or unused voucher.",
+			"Website: <a href='http://ipoh.mboutiquehotels.com/' target='_blank'>http://ipoh.mboutiquehotels.com/</a>"
+		]
+	},
+	{
+		"category": "Entertainment",
+		"states": "Selangor",
+		"title": "en - sel",
+		"contentText":
+		[
+			"Non-Valentine's Special 20% discount fresh flowers with a minimum purchase of RM100.",
+			"Valentine's Special 10% discount fresh flowers minimum purchase of RM100."
+		],
+		"contentImage": "./images/blooming.jpg",
+		"tncList":
+		[
+			"Promo valid from 1 January 2016 - 30 April 2016.",
+			"This discount is valid for WALK-IN customers only. Customer to show the proof of promotion redeemed for this offer from Maxis mobile app to enjoy the discount.",
+			"Customers are entitled for 20% discount for all fresh flowers products throughout the whole promotional period EXCEPT during the Valentine's from 10 February - 15 February (both dates are inclusive).",
+			"Minimum purchase amount is RM100 and above."
+		]
+	},
+	{
+		"category": "Food and Beverage",
+		"states": "Sabah",
+		"title": "fnb sabah",
+		"contentText":
+		[
+			"Get a Premier Room at RM198 with breakfast (n/p: RM480).",
+			"Download the <a href='http://www.maxis.com.my/en/personal/services/addons/apps/maxis-cs.html' target='_blank'>MyMaxis App</a> now to redeem your rewards."
+		],
+		"contentImage": "./images/m_boutique.jpg",
+		"tncList":
+		[
+			"Valid for bookings from 1 March 2016 - 30 June 2016.",
+			"Valid for stays from 1 March – 30 December 2016.",
+			"Original app voucher must be present at the point of redemption.",
+			"Promotion is not redeemable or exchangeable for cash.",
+			"Not valid with any on-going promotions, offers and /or discounts.",
+			"Prior reservation is required. To make a reservation, call <a href='tel:6052551555'>+605 255 1555</a> and mention your promo code.",
+			"Rooms are subject to availability.",
+			"Strictly no refunds once a payment is made to confirmed your reservation.",
+			"No amendments allowed after your reservation is confirmed. Voucher is subject to forfeiture for cancellation, no-show, or unused voucher.",
+			"Website: <a href='http://ipoh.mboutiquehotels.com/' target='_blank'>http://ipoh.mboutiquehotels.com/</a>"
+		]
+	},
+	{
+		"category": "Shopping",
+		"states": "Selangor",
+		"title": "Blooming 2",
+		"contentText":
+		[
+			"Non-Valentine's Special 20% discount fresh flowers with a minimum purchase of RM100.",
+			"Valentine's Special 10% discount fresh flowers minimum purchase of RM100."
+		],
+		"contentImage": "./images/blooming.jpg",
+		"tncList":
+		[
+			"Promo valid from 1 January 2016 - 30 April 2016.",
+			"This discount is valid for WALK-IN customers only. Customer to show the proof of promotion redeemed for this offer from Maxis mobile app to enjoy the discount.",
+			"Customers are entitled for 20% discount for all fresh flowers products throughout the whole promotional period EXCEPT during the Valentine's from 10 February - 15 February (both dates are inclusive).",
+			"Minimum purchase amount is RM100 and above."
+		]
+	}
+]

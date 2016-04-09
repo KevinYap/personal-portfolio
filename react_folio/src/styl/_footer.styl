@@ -1,0 +1,39 @@
+footer
+	background-color #eee
+	min-height 95px
+	text-align center
+	padding 20px 0
+	ul.social
+		margin 0 auto 15px auto
+		padding 0
+		li
+			display inline-block
+			position relative
+			a
+				font-weight 400
+				text-transform initial
+				set-font-size(14px)
+			a:after
+				content ""
+				width 0%
+				height 1px
+				background-color #666
+				display block
+				position absolute
+				bottom 1px
+				transition 0.3s ease-in-out
+			.no-touch &
+				a:hover:after	
+					width 100%
+			span
+				color lightBlue
+				display inline-block
+				margin 0 10px
+				transition 0.3s ease-in-out
+				+from-width(640px)
+					margin 0 20px
+			.no-touch &
+				span:hover
+					transform rotate(180deg)
+	.copyright
+		set-font-size(12px)
